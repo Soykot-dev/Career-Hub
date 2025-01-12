@@ -5,7 +5,6 @@ import FeaturedJobs from "../FeaturedJobs/FeaturedJobs";
 const Home = () => {
     return (
         <div>
-            <h2>This Home</h2>
             <Banner></Banner>
             <CategoryList></CategoryList>
             <FeaturedJobs></FeaturedJobs>
