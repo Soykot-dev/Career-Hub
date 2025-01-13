@@ -9,8 +9,8 @@ const Header = () => {
         <li><NavLink to="/blogs" className={({ isActive, isPending }) => isPending ? "pending" : isActive ? "text-[#808EFE] underline hover:text-[#6d6fff] font-semibold duration-100 hover:ml-1" : "text-gray-500 hover:text-black duration-100 hover:underline hover:ml-1"}>Blogs</NavLink></li>
     </>
     return (
-        <div>
-            <div className="navbar bg-base-100">
+        <div className="h-16">
+            <div className="navbar bg-base-100 shadow-sm fixed z-50">
                 <div className="navbar-start">
                     <div className="dropdown -ml-5 md:ml-0">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
