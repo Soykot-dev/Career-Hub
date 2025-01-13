@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import locationPng from '../../../assets/icons/Location.png'
 import money from '../../../assets/icons/money2.png'
+import PropTypes from 'prop-types';
 const AppliedJobCard = ({ job }) => {
     const { id, logo, job_title, company_name, remote_or_onsite, job_type, location, salary } = job;
     return (
@@ -34,5 +35,9 @@ const AppliedJobCard = ({ job }) => {
         </div>
     );
 };
+
+AppliedJobCard.propTypes = {
+    job: PropTypes.object.isRequired
+}
 
 export default AppliedJobCard;
