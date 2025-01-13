@@ -14,15 +14,17 @@ const AppliedJobs = () => {
         setAppliedJobs(jobApplied);
     }, [jobs])
     return (
-        <div>
+        <div className="mb-16">
             <div className="relative flex justify-center items-center bg-[#F9F9FF] rounded-md h-56">
                 <img className="absolute left-0 bottom-0" src={bg1} alt="" />
                 <h3 className="text-2xl font-semibold">Applied Jobs</h3>
                 <img className="absolute right-0 top-0" src={bg2} alt="" />
             </div>
-            {
-                appliedJobs?.map(job => <AppliedJobCard key={job.id} job={job}></AppliedJobCard>)
-            }
+            <div className="mx-3 md:mx-0">
+                {
+                    appliedJobs?.map(job => <AppliedJobCard key={job.id} job={job}></AppliedJobCard>)
+                }
+            </div>
         </div>
     );
 };

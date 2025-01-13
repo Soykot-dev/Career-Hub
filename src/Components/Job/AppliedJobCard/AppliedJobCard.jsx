@@ -5,11 +5,11 @@ import PropTypes from 'prop-types';
 const AppliedJobCard = ({ job }) => {
     const { id, logo, job_title, company_name, remote_or_onsite, job_type, location, salary } = job;
     return (
-        <div className="mt-5 flex flex-col md:flex-row gap-5 border p-5 rounded-md">
-            <div className="bg-[#F4F4F4] w-40 h-40  flex justify-center items-center rounded-md">
+        <div className="mt-5 group flex flex-col md:flex-row gap-3 md:gap-5 border hover:border-gray-400 duration-200 p-5 rounded-md">
+            <div className="bg-[#F4F4F4] duration-200 group-hover:bg-[#eaeaea] md:w-40 h-40  flex justify-center items-center rounded-md">
                 <img className='w-20' src={logo} alt="" />
             </div>
-            <div className="flex-grow space-y-3">
+            <div className="flex-grow space-y-1 md:space-y-3">
                 <h3 className="text-lg font-medium">{job_title}</h3>
                 <p className="text-sm">{company_name}</p>
                 <div className="flex gap-3">
