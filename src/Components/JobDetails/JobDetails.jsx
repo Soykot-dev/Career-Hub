@@ -6,6 +6,8 @@ import calendarImg from '../../assets/icons/calendar.png'
 import phoneImg from '../../assets/icons/phone.png'
 import emailImg from '../../assets/icons/email.png'
 import locationImg from '../../assets/icons/location2.png'
+import { storeJob } from "../../Utility/localStorage";
+import { Toaster } from "react-hot-toast";
 
 const JobDetails = () => {
     const jobs = useLoaderData();
@@ -13,6 +15,10 @@ const JobDetails = () => {
     const job = jobs.find(job => job.id === parseInt(id));
     const { job_title, salary, contact_information, job_description, job_responsibility, educational_requirements, experiences } = job;
     const { phone, email, address } = contact_information;
+    const handleApplyJob = (id) => {
+        storeJob(id);
+    }
+    
     return (
         <div className="mb-16">
             <div className="relative flex justify-center items-center bg-[#F9F9FF] rounded-md h-56">
@@ -57,10 +63,14 @@ const JobDetails = () => {
                         </div>
                     </div>
                     <div className="">
-                        <button className="w-full mt-4 bg-[#808EFE] text-white font-semibold py-2 rounded-md">Apply Now</button>
+                        <button onClick={() => handleApplyJob(id)} className="w-full mt-4 bg-[#9ea9ff] hover:bg-[#6779ff] duration-150 text-white font-semibold py-2 rounded-md">Apply Now</button>
                     </div>
                 </div>
             </div>
+            <Toaster
+                position="top-center"
+                reverseOrder={false}
+            />
         </div>
     );
 };
