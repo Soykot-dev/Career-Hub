@@ -1,7 +1,7 @@
 const Statistics = () => {
     return (
-        <div>
-            Statistics
+        <div className="flex h-[60vh] items-center justify-center">
+            <h1 className="text-7xl font-black">Statistics Not Available</h1>
         </div>
     );
 };
