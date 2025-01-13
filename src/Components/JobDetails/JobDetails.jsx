@@ -16,7 +16,7 @@ const JobDetails = () => {
     const { job_title, salary, contact_information, job_description, job_responsibility, educational_requirements, experiences } = job;
     const { phone, email, address } = contact_information;
     const handleApplyJob = (id) => {
-        storeJob(id);
+        storeJob(parseInt(id));
     }
     
     return (
