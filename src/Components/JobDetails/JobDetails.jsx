@@ -8,6 +8,7 @@ import emailImg from '../../assets/icons/email.png'
 import locationImg from '../../assets/icons/location2.png'
 import { storeJob } from "../../Utility/localStorage";
 import { Toaster } from "react-hot-toast";
+import { Helmet } from "react-helmet-async";
 
 const JobDetails = () => {
     const jobs = useLoaderData();
@@ -21,6 +22,9 @@ const JobDetails = () => {
     
     return (
         <div className="mb-16">
+            <Helmet>
+                <title>Career Hub | Job Details</title>
+            </Helmet>
             <div className="relative flex justify-center items-center bg-[#F9F9FF] rounded-md h-56">
                 <img className="absolute left-0 bottom-0" src={bg1} alt="" />
                 <h3 className="text-2xl font-semibold">Job Details</h3>

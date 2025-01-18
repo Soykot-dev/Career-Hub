@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import bg1 from '../../assets/images/bg1.png'
 import bg2 from '../../assets/images/bg2.png'
 import AppliedJobCard from "../Job/AppliedJobCard/AppliedJobCard";
+import { Helmet } from "react-helmet-async";
 
 const AppliedJobs = () => {
     const [appliedJobs, setAppliedJobs] = useState([]);
@@ -34,6 +35,9 @@ const AppliedJobs = () => {
     }
     return (
         <div className="mb-16">
+            <Helmet>
+                <title>Career Hub | Applied Jobs</title>
+            </Helmet>
             <div className="relative flex justify-center items-center bg-[#F9F9FF] rounded-md h-56">
                 <img className="absolute left-0 bottom-0" src={bg1} alt="" />
                 <h3 className="text-2xl font-semibold">Applied Jobs</h3>

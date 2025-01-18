@@ -8,6 +8,7 @@ import AppliedJobs from './Components/AppliedJobs/AppliedJobs'
 import Statistics from './Components/Statistics/Statistics'
 import Error from './Components/Error/Error'
 import JobDetails from './Components/JobDetails/JobDetails'
+import { HelmetProvider } from 'react-helmet-async'
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <HelmetProvider>
+      <RouterProvider router={router} />
+    </HelmetProvider>
   </StrictMode>,
 )
